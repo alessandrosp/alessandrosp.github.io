@@ -1,4 +1,5 @@
 ---
+title: Notes
 layout: default
 ---
 <div class="posts">

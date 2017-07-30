@@ -1,4 +1,5 @@
 ---
+title: Home
 layout: null
 ---
 <html>
@@ -6,6 +7,7 @@ layout: null
     <meta charset="utf-8">
     <title>Home</title>
 	<link rel="stylesheet" type="text/css" href="/assets/style.css">
+	<link rel="shortcut icon" type="image/png" href="/assets/images/chip.png">
   </head>
   <body>
 	<div id="index-container">
