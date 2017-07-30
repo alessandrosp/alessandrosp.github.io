@@ -1,9 +1,13 @@
 body {
 	background: #fbfbf9;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 16;
+    font-size: 1.7em;
+	color: #3A4145;
+    line-height: 1.6em;
+    letter-spacing: 0.01rem;
 }
 
 #index-container { 
     text-align: center;
+	padding: 40px 20px 70px;
 }
