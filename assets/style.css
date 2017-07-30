@@ -3,3 +3,7 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 16;
 }
+
+#index-container { 
+    text-align: center;
+}
