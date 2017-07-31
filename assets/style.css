@@ -1,6 +1,7 @@
 a {
 	text-decoration: none;
 	color: #3A4145;
+	border-bottom: 1px solid #F49253;
 }
 
 a:visited {
@@ -25,13 +26,13 @@ body {
 	padding: 40px 20px 70px;
 }
 
-div#index-links a { 
+/*div#index-links a { 
     border-bottom: 1px solid #F49253;
 }
 
 div#index-links a:hover {
 	color: #F49253;
-}
+}*/
 
 .header-image {
 	width: 150px;
@@ -42,6 +43,8 @@ div#index-links a:hover {
 	width: 450px;
     display: inline-block;
 	text-align: right;
+	float: right;
+	font-size: large;
 }
 
 #main { 
