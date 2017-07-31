@@ -25,9 +25,14 @@ body {
 	padding: 40px 20px 70px;
 }
 
-#index-link a { 
+div#index-links a { 
     border-bottom: 1px solid #F49253;
 }
+
+div#index-links a:hover {
+	color: #F49253;
+}
+
 
 #main { 
 	margin: auto;
