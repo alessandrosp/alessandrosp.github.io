@@ -2,7 +2,7 @@
 title: Notes
 layout: default
 ---
-{% include header.html %}
+{% include header.html image="header01" %}
 <div>
 	{% for post in site.posts %}
 		<span class="post-date">{{ post.date | date: "%-d %B %Y" }}</span>
