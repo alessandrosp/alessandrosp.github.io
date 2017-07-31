@@ -1,5 +1,6 @@
 a {
 	text-decoration: none;
+	color: #3A4145;
 }
 
 a:visited {
@@ -22,6 +23,10 @@ body {
 #index-container { 
     text-align: center;
 	padding: 40px 20px 70px;
+}
+
+#index-link a { 
+    border-bottom: 1px solid #F49253;
 }
 
 #main { 

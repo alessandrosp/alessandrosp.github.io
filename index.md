@@ -16,7 +16,7 @@ layout: null
 		</a>
 		<p>I am <b>Alessandro</b>, machine learning enthusiast at Google.</p>
 		<p>I write mostly about data science because I know how much supermodels love it.</p>
-		<div id=""><a href="/notes">Notes</a> – <a href="/travelling">Travelling</a></div>
+		<div id="index-links"><a href="/notes">Notes</a> – <a href="/travelling">Travelling</a></div>
 	</div>
   </body>
 </html>
