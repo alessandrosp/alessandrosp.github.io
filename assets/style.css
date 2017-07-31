@@ -2,6 +2,14 @@ a {
 	text-decoration: none;
 }
 
+a:visited {
+	color: #3A4145;
+}
+
+a:hover {
+	color: black;
+}
+
 body {
 	background: #FFFFFF; /* When new logo, #FBFBF9; */
 	font-family: 'Open Sans', sans-serif;
@@ -23,12 +31,16 @@ body {
 }
 
 .post-date {
-	width: 90px;
+	width: 120px;
 	margin-right: 30px;
 	text-align: center;
 	text-transform: uppercase;
+    font-size: small;
+    display: inline-block;
 }
 
 .post-title {
-	width: 450px;
+	width: 420px;
+    display: inline-block;
+    font-size: large;
 }
