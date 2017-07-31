@@ -2,7 +2,7 @@
 title: Travelling
 layout: default
 ---
-{% include header.html image="header01" %}
+{% include header.html image="header02" %}
 <div>
 	<h1>Travelling</h1>
 	<h2>Countries I visited</h2>
