@@ -33,6 +33,16 @@ div#index-links a:hover {
 	color: #F49253;
 }
 
+.header-image {
+	width: 150px;
+    display: inline-block;
+}
+
+.header-links {
+	width: 450px;
+    display: inline-block;
+	text-align: right;
+}
 
 #main { 
 	margin: auto;
