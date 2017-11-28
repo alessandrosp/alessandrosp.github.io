@@ -1,55 +1,19 @@
-a {
-	text-decoration: none;
-	color: #3A4145;
-	border-bottom: 1px solid #F49253;
+.btn {
+	color: white;
+	font-weight: bold;
+	border: 2px solid #FFCFEA;
+	background-color: #FFCFEA;
 }
 
-a:visited {
-	color: #3A4145;
+.btn:hover {
+	color: white;
+	border: 2px solid #CBFFE6;
+	background-color: #FFCFEA;
 }
 
-a:hover {
-	color: black;
-}
-
-body {
-	background: #FFFFFF; /* When new logo, #FBFBF9; */
-	font-family: 'Open Sans', sans-serif;
-    font-size: 1.7em;
-	color: #3A4145;
-    line-height: 1.6em;
-    letter-spacing: 0.01rem;
-}
-
-#index-container { 
-    text-align: center;
-	padding: 40px 20px 70px;
-}
-
-/*div#index-links a { 
-    border-bottom: 1px solid #F49253;
-}
-
-div#index-links a:hover {
-	color: #F49253;
-}*/
-
-.header-image {
-	width: 350px;
-    display: inline-block;
-}
-
-span.header-image img {
-	width: 100%;
-}
-
-.header-links {
-	width: 250px;
-    display: inline-block;
-	text-align: right;
-	float: right;
-	font-size: large;
-	word-break: break-word;
+img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 #main { 
@@ -61,14 +25,45 @@ span.header-image img {
 .post-date {
 	width: 120px;
 	margin-right: 30px;
-	text-align: center;
+	margin-top: 5px;
+	text-align: right;
 	text-transform: uppercase;
     font-size: small;
     display: inline-block;
+    vertical-align: middle;
 }
 
 .post-title {
-	width: 420px;
+	width: 410px;
+	margin-top: 5px;
     display: inline-block;
     font-size: large;
+    text-decoration: none;
+    color: #3A4145;
+    font-size: large;
 }
+
+.post-title a {
+	text-decoration: none;
+	color: #3A4145;
+	border-bottom: 1.5px solid #FFCFEA;	
+}
+
+.post-title a:visited {
+	color: #3A4145;
+}
+
+.post-title a:hover {
+	color: black;
+}
+
+/*
+
+white: white;
+pink: FFCFEA;
+mint: CBFFE6;
+grey: 3A4145;
+
+old orange: #F49253;
+
+*/
