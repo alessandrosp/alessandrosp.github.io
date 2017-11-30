@@ -1,14 +1,58 @@
+a {
+	text-decoration: none;
+	color: #3A4145;
+	border-bottom: 1.8px solid #F69FB0;
+}
+
+a:hover {
+	color: black;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #3A4145;
+}
+
+a.nav-link {
+	margin-right: 4px;
+	padding-bottom: 6px;
+}
+
+#article-date {
+	font-weight: bold;
+}
+
+#back-arrow {
+    position: relative;
+    top: 28px;
+    left: -68px;
+}
+
 .btn {
 	color: white;
 	font-weight: bold;
-	border: 2px solid #FFCFEA;
-	background-color: #FFCFEA;
+	border: 2px solid #F69FB0; 
+	background-color: #F69FB0;
+}
+
+.btn:active, .btn:focus {
+	color: white;
+	border: 2px solid #F69FB0;
+	background-color: #F69FB0;
+	box-shadow: none;
 }
 
 .btn:hover {
 	color: white;
-	border: 2px solid #CBFFE6;
-	background-color: #FFCFEA;
+	border: 2px solid #F17994;
+	background-color: #F69FB0;
+	box-shadow: none;
+}
+
+.form-control:focus {
+    outline-width: 0;
+    border-color: #CBFFE6;
+    box-shadow: 0 0 0 2px #CBFFE6;
 }
 
 img {
@@ -43,24 +87,13 @@ img {
     font-size: large;
 }
 
-.post-title a {
-	text-decoration: none;
-	color: #3A4145;
-	border-bottom: 1.5px solid #FFCFEA;	
-}
-
-.post-title a:visited {
-	color: #3A4145;
-}
-
-.post-title a:hover {
-	color: black;
-}
-
 /*
 
 white: white;
 pink: FFCFEA;
+pink ligher: FAC8D3
+pink strong F69FB0;
+pink even strong: F17994;
 mint: CBFFE6;
 grey: 3A4145;
 
