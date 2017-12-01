@@ -7,6 +7,7 @@ a {
 a:hover {
 	color: black;
 	text-decoration: none;
+	border-bottom: 1.8px solid #F17994;
 }
 
 a:visited {
@@ -45,7 +46,7 @@ a.nav-link {
 .btn:hover {
 	color: white;
 	border: 2px solid #F17994;
-	background-color: #F69FB0;
+	background-color: #F17994;
 	box-shadow: none;
 }
 
