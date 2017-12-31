@@ -17,7 +17,11 @@ The following data comes from [termometropolitico.it](https://www.termometropoli
 
 ## Data collection
 
-Save the tweets.
+- Use Twitter API to get all the tweets posted by candidates from January 1, 2017 to December 24, 2017 (extremes included). Retweets are ignored.
+- The code for data collection is available here.
+- For the duration of the analysis the tweets are stored in a local database to avoid re-querying the Twitter API multiple times.
+
+## Simple count of tweets
 
 ## Sentiment analysis
 
