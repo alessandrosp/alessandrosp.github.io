@@ -21,11 +21,35 @@ The following data comes from [termometropolitico.it](https://www.termometropoli
 - The code for data collection is available here.
 - For the duration of the analysis the tweets are stored in a local database to avoid re-querying the Twitter API multiple times.
 
-## Simple count of tweets
+## Descriptive stats
+
+- How many tweets
+- Average length
+- Longest
+- Shortest
+- Number of tweets with links
+- Number of hash
+- Number of mentions
 
 ## Sentiment analysis
 
-Use http://polyglot.readthedocs.io/en/latest/Sentiment.html to compute
+I used the [Polyglot package](http://polyglot.readthedocs.io/en/latest/Sentiment.html) to compute some rough sentiment scores for each candidate's tweets. I chose Polyglot as it's one of the few packages to offer localization in Italian. Note that Polyglot only offer a polarity score (-1.0, 0.0 or +1.0) for words. Sentiment scores were computed by averaging the polarity score for each tweet.
+
+Specifically:
+
+- Loaded the data from TinyDB
+- Cleaned the tweets
+ - Removed links
+ - Removed hash
+ - Removed mentions
+- Computed polarity for each word via Polyglot
+- For each tweet an average polarity was computed (ignoring words with polarity equal to zero)
+- Tweets with an average polarity (i.e. sentiment score) smaller than zero were labeled as *negative*, with an average polarity equal to zero *neutral* and with an average polarity higher than zero *positive*
+
+The results are summarized below:
+
+    image goes here
+
 
 ## Keywords
 
