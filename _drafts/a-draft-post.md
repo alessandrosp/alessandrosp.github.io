@@ -51,9 +51,45 @@ The results are summarized below:
     image goes here
 
 
-## Keywords
+## Keywords analysis
 
 For each candidate, top 10 tfidf words (exclude stop words)
+
+| GiorgiaMeloni     | PietroGrasso                 | berlusconi         | luigidimaio        | matteorenzi | matteosalvinimi   | 
+|-------------------|------------------------------|--------------------|--------------------|-------------|-------------------| 
+| italia            | storiedisangueamiciefantasmi | lintervista        | stelle             | avanti      | salvini           | 
+| governo           | grazie                       | tgcom              | renzi              | lingotto    | lega              | 
+| oggi              | vittime                      | italia             | governo            | trenopd     | italia            | 
+| sindaco           | senato                       | elezionisicilia    | oggi               | lavoro      | stopinvasione     | 
+| intervista        | maggio                       | musumecipresidente | diretta            | oggi        | italiani          | 
+| amministrative    | anni                         | italiani           | italia             | italia      | primagliitaliani  | 
+| italiasovrana     | oggi                         | stato              | sceglieteilfuturo  | assembleapd | andiamoagovernare | 
+| renzi             | palermo                      | portaaporta        | movimento          | insieme     | dimartedi         | 
+| italiani          | mafia                        | settegiorni        | rally              | scuolapd    | lintervista       | 
+| roma              | ricordo                      | paese              | ospite             | futuro      | live              | 
+| immigrati         | presto                       | confapi            | voto               | millegiorni | ottoemezzo        | 
+| piazza            | esempio                      | governo            | sicilia            | portaaporta | amici             | 
+| tempodipatrioti   | libera                       | europa             | tour               | europa      | governo           | 
+| appelloaipatrioti | ucciso                       | stelle             | grazie             | grazie      | portaaporta       | 
+| anni              | libreria                     | politica           | solo               | istat       | congressolega     | 
+| diretta           | impegno                      | matrix             | paese              | perché      | anni              | 
+| aspetto           | italia                       | programma          | prima              | finestra    | renzi             | 
+| fratelli          | legge                        | anni               | grande             | scienza     | gabbiaopen        | 
+| europa            | stato                        | tasse              | italiani           | euro        | casa              | 
+| immigrazione      | liberieuguali                | chetempochefa      | legge              | politica    | pontida           | 
+| sostenere         | piolatorre                   | molto              | sera               | democratica | video             | 
+| seguitemi         | bellissimo                   | solo               | lotti              | andiamo     | agorarai          | 
+| atreju            | voce                         | fatto              | renziconfessa      | cosa        | immigrati         | 
+| candidatura       | auguri                       | lavoro             | rispettoperzuccaro | prima       | diretta           | 
+| nazionale         | insieme                      | fiscale            | romeo              | tempo       | matrix            | 
+
+Few observations in random order:
+
+- Salvini is the only candidate to have his own name as a keyword;
+- Many keywords in Grasso's vocabulary refer to Mafia (e.g., victims, Palermo, mafia, killed, etc.), which makes sense given that Grasso has been for many years Prosecutor at the Court of Palermo;
+
+It's also interesting to note how the different candidates are all talking about their favourite subjects rather than interact on the same set of issues. For example the word *immigrati* (en: *immigrants*) appears in the vocabulary of both far-right candidates Matteo Salvini and Giorgia Meloni; yet, the word is absent from Matteo Renzi's vocabulary, signifying that an opposite narrative is not present. In other words: candidates do not seem to offer different points of views on the same problems, they seem to be all talking about their own issues.
+
 
 ## Clustering
 
