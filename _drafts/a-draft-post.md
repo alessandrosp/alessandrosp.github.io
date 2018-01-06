@@ -48,7 +48,7 @@ Specifically:
 
 The results are summarized below:
 
-    image goes here
+![Stacked bar plot]({{ "/assets/images/sentiment-plot.svg" | absolute_url }})
 
 
 ## Keywords analysis
