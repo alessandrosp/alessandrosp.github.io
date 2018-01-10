@@ -6,7 +6,7 @@ tags: [python, data science, sklearn, twitter, sentiment analysis, polyglot, pol
 ---
 # Introduction
 
-The following data comes from [termometropolitico.it](https://www.termometropolitico.it/sondaggi-politici-elettorali) and refer to the period of time 2017, Dec 18 - 2017, Dec 24. Only parties with 5%+ have been included.
+The following data comes from [termometropolitico.it](https://www.termometropolitico.it/sondaggi-politici-elettorali) and refer to the period of time 18 December 2017 to 24 December 2017. Only parties with 5%+ have been included.
 
 | Party | Initials | % | Leader | Orientation
 | ----------- | ----------- | ----------- | ----------- | -----------
@@ -20,17 +20,17 @@ The following data comes from [termometropolitico.it](https://www.termometropoli
 *Many would argue that the *de facto* leader of the party is Beppe Grillo; as Luigi di Maio won the most recent primary elections, I decided to go with him.
 **In the rest of the post I would refer as these politicians simply as *candidates*, even though Berlusconi may or may not be the actual prime minister candidate of his party.
 
-# The analysis
+# The Analysis
 
-## Data collection
+## Data Collection
 
-- Use Twitter API to get all the tweets posted by candidates from January 1, 2017 to December 24, 2017 (extremes included). Retweets are ignored;
-- The code for data collection is available [here](https://github.com/annoys-parrot/twitter-ita-politics-2017/blob/master/data-collection.py);
-- For the duration of the analysis the tweets are stored in a local database to avoid re-querying the Twitter API multiple times;
+- Used Twitter API to get all the tweets posted by candidates from January 1, 2017 to December 24, 2017 (extremes included). Retweets were ignored;
+- The code for data collection is available [here](https://github.com/annoys-parrot/twitter-ita-politics-2017/blob/master/data_collection.py);
+- For the duration of the analysis the tweets were stored in a local database to avoid re-querying the Twitter API multiple times (both raw and preprocessed data are [available on GitHub](https://github.com/annoys-parrot/twitter-ita-politics-2017/tree/master/db)).
 
-## Descriptive analysis
+## Descriptive Analysis
 
-For each candidate, a number of descriptive statistics were computed. The full code can be found here.
+For each candidate, a number of descriptive statistics were computed. The full code can be found [here](https://github.com/annoys-parrot/twitter-ita-politics-2017/blob/master/descriptive_analysis.py).
 
 |                  | GiorgiaMeloni | PietroGrasso | berlusconi | luigidimaio | matteorenzi | matteosalvinimi | 
 |------------------|---------------|--------------|------------|-------------|-------------|-----------------| 
@@ -42,43 +42,34 @@ For each candidate, a number of descriptive statistics were computed. The full c
 
 Note: because of the way Twitter works, average_links refers to both external links and images.
 
-## Sentiment analysis
+## Sentiment Analysis
 
-I used the [Polyglot package](http://polyglot.readthedocs.io/en/latest/Sentiment.html) to compute some rough sentiment scores for each candidate's tweets. I chose Polyglot as it's one of the few packages to offer localization in Italian. Note that Polyglot only offer a polarity score (-1.0, 0.0 or +1.0) for words. Sentiment scores were computed by averaging the polarity score for each tweet.
+I used the [Polyglot package](http://polyglot.readthedocs.io/en/latest/Sentiment.html) to compute some rough sentiment scores for each candidate's tweets. I chose Polyglot as it's one of the few packages to offer localization in Italian. Note that Polyglot only offers a polarity score (-1.0, 0.0 or +1.0) for words. Sentiment scores were then computed by averaging the polarity scores for each token.
 
 Specifically:
 
-- Loaded the data from TinyDB
-- Cleaned the tweets
- - Removed links
- - Removed hashtags
- - Removed mentions
-- Computed polarity for each word via Polyglot
-- For each tweet an average polarity was computed (ignoring words with polarity equal to zero)
+- Loaded the preprocessed data from TinyDB
+- Computed polarity for each token via Polyglot
+- For each tweet an average polarity was computed (ignoring tokens with polarity equal to zero)
 - Tweets with an average polarity (i.e. sentiment score) smaller than zero were labeled as *negative*, with an average polarity equal to zero *neutral* and with an average polarity higher than zero *positive*
-- The code is available [here](https://github.com/annoys-parrot/twitter-ita-politics-2017/blob/master/sentiment-analysis.py)
+- The code is available [here](https://github.com/annoys-parrot/twitter-ita-politics-2017/blob/master/sentiment_analysis.py)
 
 The results are summarized below. Candidates are presented from far-left to far-right, with anti-establishment party M5S in the middle.
 
 ![Stacked bar plot]({{ "/assets/images/sentiment-plot.svg" | absolute_url }})
 
-Right parties seem to have an higher percentage of negative tweets. While this could be the result of a precise communication strategy, it's also important to note that the government was left-wing in 2017 and thus it makes sense for right parties to be more critical about the overall economical and political landscape.
+Right parties seem to have an higher percentage of negative tweets. While this could be the result of a precise communication strategy, it's also important to note that the government was left-wing in 2017 and thus it makes sense for right parties to be more critical about the overall economical and political state of the country.
 
-## Keywords analysis
+## Keywords Analysis
 
 For each candidate, a list of 25 keywords was computed by analysing their tweets and comparing them against the other five candidates.
 
 Specifically:
 
-- Loaded the data from TinyDB
-- Cleaned the tweets
-  - Removed links
-  - Removed mentions
-  - Removed special characters
-  - Cast everything as lowercase
- - Created a single string containing for each candidate all of her or his tweets
- - Computed the tfidf matrix
- - Selected the top 25 words with highest tfidf score for each candidate
+- Loaded the preoprocessed data from TinyDB
+- Created a single string containing for each candidate all of her or his tweets
+- Computed the tfidf matrix
+- Selected the top 25 words with highest tfidf score for each candidate
 
 The results are summarized below. Candidates are presented from far-left to far-right, with anti-establishment party M5S in the middle.
 
@@ -116,6 +107,6 @@ Few observations in random order:
 - Many keywords in Grasso's vocabulary refer to Mafia (e.g., victims, 9may, Palermo, mafia, killed, etc.), which makes sense given that Grasso has been for many years Prosecutor at the Court of Palermo;
 - Luigi Di Maio, Giorgia Meloni and Matteo Salvini all have *renzi* in their vocabulary (referring to Matteo Renzi, leader of PD). Interestingly, Berlusconi doesn't;
 - Unsurprisingly, the two far-right parties all have many immigration-related keywords (e.g., immigrants, immigration, stoptheinvasion, italiansfirst, etc.);
-- Salvini is the only candidate to have his own name as a keyword. This may be simply the result of him having named his "sub-party" Noi Con Salvini (en: Us With Salvini);
+- Salvini is the only candidate to have his own name as a keyword. This may be simply the result of him having named his "sub-party" Noi con Salvini (en: Us With Salvini).
 
-It's also interesting to note how candidates do not seem to be communicating about the same issues from different points of view (e.g., immigration is good vs. immigration is bad) as much as talking about what they consider the most important problems for the country. In other words, nobody seems to be offering an opposite narrative to other candidates'.
+It's also interesting to note how candidates do not seem to be communicating about the same issues from different points of view (e.g., immigration is good vs. immigration is bad) as much as talking about completely different topics. In other words, nobody seems to be offering an opposite narrative to other candidates'.
