@@ -24,13 +24,17 @@ The following data comes from [termometropolitico.it](https://www.termometropoli
 
 ## Descriptive analysis
 
-- How many tweets
-- Average length
-- Longest
-- Shortest
-- Number of tweets with links
-- Number of hash
-- Number of mentions
+For each candidate, a number of descriptive statistics were computed. The full code can be found here.
+
+|                  | GiorgiaMeloni | PietroGrasso | berlusconi | luigidimaio | matteorenzi | matteosalvinimi | 
+|------------------|---------------|--------------|------------|-------------|-------------|-----------------| 
+| num_tweets       | 617           | 143          | 651        | 420         | 518         | 3188            | 
+| average_length   | 149.84        | 147.16       | 171.84     | 128.77      | 126.75      | 127.00          | 
+| average_hashes   | 1.84          | 1.03         | 1.03       | 0.63        | 1.23        | 1.28            | 
+| average_mentions | 0.33          | 0.54         | 0.23       | 0.36        | 0.14        | 0.11            | 
+| average_links    | 0.99          | 0.92         | 0.33       | 0.92        | 0.58        | 0.74            | 
+
+Note: because of the way Twitter works, average_links refers to both external links and images.
 
 ## Sentiment analysis
 
@@ -109,8 +113,3 @@ Few observations in random order:
 - Salvini is the only candidate to have his own name as a keyword. This may be simply the result of him having named his "sub-party" Noi Con Salvini (en: Us With Salvini);
 
 It's also interesting to note how candidates do not seem to be communicating about the same issues from different points of view (e.g., immigration is good vs. immigration is bad) as much as talking about what they consider the most important problems for the country. In other words, nobody seems to be offering an opposite narrative to other candidates'.
-
-
-## Clustering analysis
-
-Use word embedding to generate average vectors for each individual tweet. Add sentiment score. Cluster with k=2 (left/right) and k=3 (left/right/other). Reduce dimensionality to 2 to display results (each tweet a point; color of the point for the party; bakcground color for the cluster; if too complicated, the use colours for clusters and shape points for party or viceversa). 
