@@ -1,3 +1,9 @@
+---
+layout: post
+title: A quick analysis of Italian 2018 general election candidates' tweets
+date:   2018-01-10 09:00:00 +0000
+tags: [python, data science, sklearn, twitter, sentiment analysis, polyglot, politics]
+---
 # Introduction
 
 The following data comes from [termometropolitico.it](https://www.termometropolitico.it/sondaggi-politici-elettorali) and refer to the period of time 2017, Dec 18 - 2017, Dec 24. Only parties with 5%+ have been included.
