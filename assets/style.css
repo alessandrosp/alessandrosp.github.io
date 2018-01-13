@@ -50,6 +50,13 @@ a.nav-link {
 	box-shadow: none;
 }
 
+/*This is to make sure the main container is always 600px*/
+@media only screen and (min-width: 1200px) {
+    .container{
+        max-width: 600px;
+    }
+}
+
 .form-control:focus {
     outline-width: 0;
     border-color: #CBFFE6;
@@ -61,16 +68,15 @@ img {
     max-height: 100%;
 }
 
+/*To remove, unused*/
 #main { 
 	margin: auto;
-	width: 600px;
 	padding: 15px;
 }
 
 .post-date {
-	width: 120px;
-	margin-right: 30px;
-	margin-top: 5px;
+	margin-top: auto;
+	margin-bottom: auto;
 	text-align: right;
 	text-transform: uppercase;
     font-size: small;
@@ -78,14 +84,24 @@ img {
     vertical-align: middle;
 }
 
+@media only screen and (max-width: 750px) {
+    .post-date {
+        text-align: left;
+    }
+}
+
 .post-title {
-	width: 410px;
 	margin-top: 5px;
     display: inline-block;
     font-size: large;
     text-decoration: none;
     color: #3A4145;
-    font-size: large;
+}
+
+@media only screen and (max-width: 750px) {
+    .post-title {
+        margin-bottom: 30px;
+    }
 }
 
 /*
