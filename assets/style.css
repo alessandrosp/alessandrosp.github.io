@@ -63,6 +63,24 @@ a.nav-link {
     box-shadow: 0 0 0 2px #CBFFE6;
 }
 
+@media only screen and (max-width: 750px) {
+    #header-button {
+        visibility: hidden;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    #header-form {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    #header-input {
+        visibility: hidden;
+    }
+}
+
 img {
     max-width: 100%;
     max-height: 100%;
