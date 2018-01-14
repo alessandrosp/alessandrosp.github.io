@@ -10,23 +10,27 @@ The following data comes from [termometropolitico.it](https://www.termometropoli
 
 | Party | Initials | % | Leader | Orientation
 | ----------- | ----------- | ----------- | ----------- | -----------
-| Movimento 5 Stelle | M5S | 27.7 | [Luigi di Maio](https://twitter.com/luigidimaio)* | Anti-establishment
+| Movimento 5 Stelle | M5S | 27.7 | [Luigi di Maio](https://twitter.com/luigidimaio)† | Anti-establishment
 | Partito Democratico | PD | 24.2 | [Matteo Renzi](https://twitter.com/matteorenzi) | Centre-left
-| Forza Italia | FI | 15.7 | [Silvio Berlusconi](https://twitter.com/berlusconi)** | Centre-right
+| Forza Italia | FI | 15.7 | [Silvio Berlusconi](https://twitter.com/berlusconi)†† | Centre-right
 | Lega Nord | Lega | 13.7 | [Matteo Salvini](https://twitter.com/matteosalvinimi) | Far-right
 | Libertà e Uguaglianza | LeU | 6.9 | [Pietro Grasso](https://twitter.com/PietroGrasso) | Far-left
 | Fratelli d'Italia | FDI | 5.2 | [Giorgia Meloni](https://twitter.com/GiorgiaMeloni) | Far-right
+{: .table .table-responsive}
 
-*Many would argue that the *de facto* leader of the party is Beppe Grillo; as Luigi di Maio won the most recent primary elections, I decided to go with him.
-**In the rest of the post I would refer as these politicians simply as *candidates*, even though Berlusconi may or may not be the actual prime minister candidate of his party.
+†Many would argue that the *de facto* leader of the party is Beppe Grillo; as Luigi di Maio won the most recent primary elections, I decided to go with him.
+
+††In the rest of the post I will refer as these politicians simply as *candidates*, even though Berlusconi may or may not be the actual prime minister candidate of his party.
 
 # The Analysis
 
 ## Data Collection
 
-- Used Twitter API to get all the tweets posted by candidates from January 1, 2017 to December 24, 2017 (extremes included). Retweets were ignored;
-- The code for data collection is available [here](https://github.com/annoys-parrot/twitter-ita-politics-2017/blob/master/data_collection.py);
-- For the duration of the analysis the tweets were stored in a local database to avoid re-querying the Twitter API multiple times (both raw and preprocessed data are [available on GitHub](https://github.com/annoys-parrot/twitter-ita-politics-2017/tree/master/db)).
+The data have been collected using Twitter API (via tweepy). Specifically: 
+
+- Used Twitter API to get all the tweets posted by candidates from January 1, 2017 to December 24, 2017 (extremes included). Retweets were ignored
+- The code for data collection is available [here](https://github.com/annoys-parrot/twitter-ita-politics-2017/blob/master/data_collection.py)
+- For the duration of the analysis the tweets were stored in a local database to avoid re-querying the Twitter API multiple times (both raw and preprocessed data are [available on GitHub](https://github.com/annoys-parrot/twitter-ita-politics-2017/tree/master/db))
 
 ## Descriptive Analysis
 
@@ -39,6 +43,7 @@ For each candidate, a number of descriptive statistics were computed. The full c
 | average_hashes   | 1.84          | 1.03         | 1.03       | 0.63        | 1.23        | 1.28            | 
 | average_mentions | 0.33          | 0.54         | 0.23       | 0.36        | 0.14        | 0.11            | 
 | average_links    | 0.99          | 0.92         | 0.33       | 0.92        | 0.58        | 0.74            | 
+{: .table .table-responsive}
 
 Note: because of the way Twitter works, average_links refers to both external links and images.
 
@@ -100,7 +105,7 @@ The results are summarized below. Candidates are presented from far-left to far-
 | voce                         | prima       | lotti              | lavoro             | atreju17           | diretta           | 
 | auguri                       | tempo       | renziconfessa      | fiscale            | candidatura        | matrix            | 
 | insieme                      | leopolda    | rispettoperzuccaro | oggi               | nazionale          | facciamosquadra   | 
-{: .table-hover }
+{: .table .table-sm .table-responsive}
 
 Few observations in random order:
 
