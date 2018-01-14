@@ -61,7 +61,8 @@ Specifically:
 
 The results are summarized below. Candidates are presented from far-left to far-right, with anti-establishment party M5S in the middle.
 
-![Stacked bar plot]({{ "/assets/images/sentiment_plot.svg" | absolute_url }})
+{% include sentiment_plot.html %}
+
 
 Right parties seem to have an higher percentage of negative tweets. While this could be the result of a precise communication strategy, it's also important to note that the government was left-wing in 2017 and thus it makes sense for right parties to be more critical about the overall economical and political state of the country.
 

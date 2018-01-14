@@ -29,6 +29,16 @@ a.nav-link {
     left: -68px;
 }
 
+/*
+The back arrow is positioned above the title and not
+to the left on small mobile screens
+*/
+@media only screen and (max-width: 750px) {
+    #back-arrow {
+        position: static;
+    }
+}
+
 .btn {
 	color: white;
 	font-weight: bold;
@@ -50,11 +60,26 @@ a.nav-link {
 	box-shadow: none;
 }
 
-/*This is to make sure the main container is always 600px*/
+/*
+This is to make sure the main container is fixed
+at 600px on large screens
+*/
 @media only screen and (min-width: 1200px) {
     .container{
         max-width: 600px;
     }
+}
+
+/*
+These CSS rules apply to the posts
+*/
+.entry p {
+	line-height: 1.7;
+}
+
+.entry h1, h2, h3 {
+	margin-top: 24px;
+	margin-bottom: 16px;
 }
 
 .form-control:focus {
@@ -84,12 +109,6 @@ a.nav-link {
 img {
     max-width: 100%;
     max-height: 100%;
-}
-
-/*To remove, unused*/
-#main { 
-	margin: auto;
-	padding: 15px;
 }
 
 .post-date {
