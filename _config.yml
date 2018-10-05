@@ -1,3 +1,5 @@
 title: Annoys Parrot
 url: http://annoys-parrot.github.io
 baseurl:
+
+highlighter: rouge
