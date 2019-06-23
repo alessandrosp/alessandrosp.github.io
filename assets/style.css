@@ -128,11 +128,12 @@ img {
 }
 
 .post-title {
+	margin-bottom: 5px;
 	margin-top: 5px;
-    display: inline-block;
-    font-size: large;
-    text-decoration: none;
-    color: #3A4145;
+	display: inline-block;
+  font-size: large;
+  text-decoration: none;
+  color: #3A4145;
 }
 
 @media only screen and (max-width: 750px) {
